@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
 
 *{
     box-sizing: border-box;
@@ -9,12 +11,25 @@
     height: 100vh;
     font-size: 20px;
     display: flex;
+    flex-direction: column;
     font-family: 'M PLUS 1 Code', sans-serif;
     justify-content: center;
     align-items: center;
-    background-image: linear-gradient(to bottom right, rgb(20, 251, 247), rgb(99, 224, 99), rgb(4, 232, 4));
+    background-image: linear-gradient(to bottom right, rgb(20, 251, 247), rgb(99, 224, 99), rgb(26, 235, 239), rgb(79, 229, 79));
 }
+.header{
+    color: white;
+    width: 90%;
+    padding: 20px;
+    background-image: linear-gradient(to bottom right, rgb(45, 50, 45, 0.3), rgb(45, 50, 45, 0.3));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 15px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.547);
 
+}
 .info{
     width: 90%;
     padding: 20px;
@@ -23,17 +38,25 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.547);
+
+}
+span{
+    font-family: 'Dancing Script', cursive;
 }
 .box{
     
     width: 80%;
     background-image: linear-gradient(to bottom right, rgb(60, 84, 60, .3), rgb(60, 84, 60, .3));
-    margin: 3px;
+    margin: 5px;
     padding: 30px;
     color: white;
-
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.547);
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: 800;
+}
+a{
+    text-decoration: none;
 }
