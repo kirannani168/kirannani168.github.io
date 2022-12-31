@@ -6,3 +6,8 @@ const changeText = ()=>{
     },7500)
 }
 changeText()
+
+//remove below lines after downloading code!!
+setTimeout(()=>{
+    alert("Particle Motion not loaded because of technical glitch!! Please download code and run to get full experience")
+}, 13000)
