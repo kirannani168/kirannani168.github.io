@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kratin Technologies</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+  <meta name="description" content="LetsInnovateHealth">
+  <meta name="keywords" content="health, senior citizens">
+  <meta name="author" content="RavikiranReddy Balemla">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="header-container">
+    <div class="header">
+      <h3>LetsInnovateHealth</h3>
+      <!-- <nav id="navig">
+        <ul>
+          <li>Home</li>
+          <li>Explore</li>
+          <li>Contact</li>
+        </ul>
+      </nav> -->
+    </div>
+  </div>
+  <div class="container">
+    <div class="row myFeatures">
+      <div class="col">
+        <div class="card text-center">
+          <div class="card-header text-bg-info p-3">
+            Featured
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Alarm <i class="bi bi-alarm"></i></h5>
+            <p class="card-text">Based on your age, alarm will be set automatically to remember food, tablets, etc</p>
+            <br>
+            <button type="button" class="btn btn-primary" id="liveToastBtn" onclick="alarmSet()">Set Alarm</button>
+          </div>
+          <div class="card-footer text-muted">
+            New!!
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center">
+          <div class="card-header text-bg-secondary p-3">
+            Featured
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Food Sugesstion <i class="bi bi-egg"></i></h5>
+            <p class="card-text">Our automated system suggests food menu to you based on your age, health status, and
+              more!!</p><br>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+              Explore Menu<span class="badge bg-secondary"></span>
+            </button>
+          </div>
+          <div class="card-footer text-muted">
+            Under Maintainance
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-center">
+          <div class="card-header text-bg-info p-3">
+            Featured
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Let Your Family Cares You!!<i class="bi bi-person-lines-fill"></i></h5>
+            <p class="card-text">Set Alerts to Your Family Members. This option will send alerts to your family members
+              regarding your health status & tablet timings</p>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Alert Your Family 
+            </button>
+          </div>
+          <div class="card-footer text-muted">
+            2 days ago
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="liveAlertPlaceholder"></div>
+
+  </div>
+
+  <div id="testt"></div>
+
+  <!-- Models -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Food Menu &nbsp;&nbsp;</h1>
+          <button type="button" class="btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top"
+            data-bs-custom-class="custom-tooltip" data-bs-title="We are developing food menu which will suggest menu based on your health status using machine Learning!! & It will be available Soon!!">
+            <i class="bi bi-patch-question-fill"></i>
+          </button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Day</th>
+                <th scope="col">Morning</th>
+                <th scope="col">Afternoon</th>
+                <th scope="col">Snacks</th>
+                <th scope="col">Dinner</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Monday</th>
+                <td>Zeera Rice</td>
+                <td>Rice + Sambar + PAppu</td>
+                <td>Milk + Biscuits</td>
+                <td>Chapati + Aalu Kurma</td>
+              </tr>
+              <tr>
+                <th scope="row">Tuesday</th>
+                <td>Vada</td>
+                <td>Rice + Sambar + Beetroot</td>
+                <td>Milk + Pakodi</td>
+                <td>Chapati + Aalu Kurma</td>
+              </tr>
+              <tr>
+                <th scope="row">Wednesday</th>
+                <td>Upma</td>
+                <td>Rice + Bittergaurd</td>
+                <td>Milk + Bread</td>
+                <td>Rice + Beetroot</td>
+              </tr>
+              <tr>
+                <th scope="row">Thursday</th>
+                <td>Uthappa</td>
+                <td>Rice + Chicken / egg</td>
+                <td>Milk + Biscuits</td>
+                <td>Chapati + Aalu Kurma + Boiled Egg</td>
+              </tr>
+              <tr>
+                <th scope="row">Friday</th>
+                <td>Zeera Rice</td>
+                <td>Rice + Sambar + PAppu</td>
+                <td>Milk + Biscuits</td>
+                <td>Chapati + Aalu Kurma</td>
+              </tr>
+              <tr>
+                <th scope="row">Saturday</th>
+                <td>Chapati + alu Kurma</td>
+                <td>Rice + Sambar + PAppu</td>
+                <td>Milk + Bread</td>
+                <td>Rice + Mixed Salad</td>
+              </tr>
+              <tr>
+                <th scope="row">Sunday</th>
+                <td>Upma</td>
+                <td>Rice + Sambar + PAppu</td>
+                <td>Milk + Biscuits</td>
+                <td>Rice + Bittergaurd + Boiled Egg</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close Menu</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Modal2 -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Alert Your Family</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group">
+          <span class="input-group-text">Name & Phone Number</span>
+          <input required type="text" aria-label="First name" class="form-control" placeholder="Eg: Kiran Reddy">
+          <input required  type="tel" aria-label="Ph.No" class="form-control" placeholder="Eg: 01246859474">
+        </div>
+        <div class="input-group">
+          <span class="input-group-text">Name & Phone Number</span>
+          <input required  type="text" aria-label="First name" class="form-control" placeholder="Eg: Mark">
+          <input required  type="tel" aria-label="Ph.No" class="form-control" placeholder="Eg: 3427689474">
+        </div>
+        <div class="input-group">
+          <span class="input-group-text">Name & Phone Number</span>
+          <input  required  type="text" aria-label="First name" class="form-control" placeholder="Eg: Vamshi">
+          <input required  type="tel" aria-label="Ph.No" class="form-control" placeholder="Eg: 0648294749">
+        </div>
+        <div class="input-group">
+          <span class="input-group-text">Name & Phone Number</span>
+          <input required  type="text" aria-label="First name" class="form-control" placeholder="Eg: Nikhil">
+          <input required  type="tel" aria-label="Ph.No" class="form-control" placeholder="Eg: 4538495400">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          
+          <button type="submit" class="btn btn-primary" data-bs-dismiss="modal" id="liveAlertBtn">Save Changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- TOASTS -->
+  
+  
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <!-- <img src="" class="rounded me-2" alt="..."> -->
+        <strong class="me-auto">Set Alarm</strong>
+        <small>Just Now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        You will be alarted at below mentiond time to get food
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+    integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+    crossorigin="anonymous"></script>
+  <script>
+    const toastTrigger = document.getElementById('liveToastBtn')
+    const toastLiveExample = document.getElementById('liveToast')
+    if (toastTrigger) {
+      toastTrigger.addEventListener('click', () => {
+        const toast = new bootstrap.Toast(toastLiveExample)
+
+        toast.show()
+      })
+    }
+
+
+    const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
+    const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
+
+
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+
+
+    const alertPlaceholder = document.getElementById('liveAlertPlaceholder')
+
+const alert = (message, type) => {
+  const wrapper = document.createElement('div')
+  wrapper.innerHTML = [
+    `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+    `   <div>${message}</div>`,
+    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+    '</div>'
+  ].join('')
+
+  alertPlaceholder.append(wrapper)
+}
+
+const alertTrigger = document.getElementById('liveAlertBtn')
+if (alertTrigger) {
+  alertTrigger.addEventListener('click', () => {
+    alert('Changes Saved', 'success')
+  })
+}
+
+  </script>
+
+</body>
+
+</html>
